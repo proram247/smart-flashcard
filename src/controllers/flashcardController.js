@@ -34,9 +34,6 @@ async function addFlashcard(req, res) {
 // Get mixed subject flashcards for a student
 async function getMixedSubjectFlashcards(req, res) {
   try {
-    // Wait for 5 seconds
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-
     const { student_id, limit } = req.query;
     if (!student_id) {
       logError("Missing student_id in flashcard retrieval");
