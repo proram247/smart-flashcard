@@ -1,0 +1,33 @@
+{
+  "name": "smart-flashcard",
+  "version": "1.0.0",
+  "description": "A Node.js/Express backend for a smart flashcard system with automatic subject inference and mixed subject retrieval",
+  "license": "ISC",
+  "author": "Shriram Singh",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "pm2 start src/server.js --name smart-flashcard -i max",
+    "stop": "pm2 stop smart-flashcard",
+    "restart": "pm2 reload smart-flashcard",
+    "logs": "pm2 logs smart-flashcard",
+    "logs:clear": "pm2 flush smart-flashcard"
+  },
+  "dependencies": {
+    "apicache": "^1.6.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "mongoose": "^8.16.2",
+    "morgan": "^1.10.0",
+    "pm2": "^6.0.8",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
